@@ -3,8 +3,10 @@
 
 				<!-- copyright -->
 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
+					Down to the Wire is co-founded by CreativeRush &amp; Tallgrass Film Association &copy; 2011-<?php echo date('Y'); ?>.
 				</p>
+
+
 				<!-- /copyright -->
 
 			</footer>

@@ -43,7 +43,7 @@
 					</div>
 					<div class="columns medium-8">
 						<nav class="nav" role="navigation">
-							<?php html5blank_nav(); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 						</nav>
 					</div>
 				</div>					
