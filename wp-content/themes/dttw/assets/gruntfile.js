@@ -22,19 +22,19 @@ module.exports = function(grunt) {
           //loadPath: require('node-bourbon').includePaths
         },
         files: {                         // Dictionary of files
-          'dist/assets/css/app.css': 'src/assets/css/app.scss'
+          'dist/css/app.css': 'src/css/app.scss'
         }
       }
     },
 
-    bake: {
-        build: {
-            options: {},
-            files: {
-              'dist/index.html': 'src/index.html'
-            }
-        }
-    },
+    // bake: {
+    //     build: {
+    //         options: {},
+    //         files: {
+    //           'dist/index.html': 'src/index.html'
+    //         }
+    //     }
+    // },
 
 
     uglify: {
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'dist/assets/js/app.js': 'src/assets/js/app.js'
+          'dist/js/app.js': 'src/js/app.js'
         }
       }
     },
@@ -51,27 +51,27 @@ module.exports = function(grunt) {
 
     watch: { 
       sass: {
-        files: ['src/assets/css/*.scss', 'src/assets/css/modules/*.scss'],
+        files: ['src/css/*.scss', 'src/css/modules/*.scss'],
         tasks: ['sass'],
         options : { nospawn : true, relative:true }
       },
-      bake: {
-        files: ['src/**/*.html', 'src/*.html', 'includes/*.html'],
-        tasks: ['bake']
-      },
+      // bake: {
+      //   files: ['src/**/*.html', 'src/*.html', 'includes/*.html'],
+      //   tasks: ['bake']
+      // },
       copy: {
-        files: ['src/assets/img/**/*.jpg','src/assets/img/*.jpg','src/assets/img/*.svg', 'src/assets/js/*.js', 'src/assets/css/*.css'],
+        files: ['src/img/**/*.jpg','src/img/*.jpg','src/img/*.svg', 'src/js/*.js', 'src/css/*.css'],
         tasks: ['copy']
       },
       uglify: {
-        files: ['src/assets/js/*.js'],
+        files: ['src/js/*.js'],
         tasks: ['uglify']
       }
     },
 
-    touch: {
-      target: ['*.html']
-    }
+    // touch: {
+    //   target: ['*.html']
+    // }
 
   });
 
@@ -81,11 +81,11 @@ module.exports = function(grunt) {
   // we can only load these if they are in our package.json
   // make sure you have run npm install so our app can find these
 
-  grunt.loadNpmTasks('../../node_modules/grunt-contrib-watch');
-  grunt.loadNpmTasks('../../node_modules/grunt-bake');
-  grunt.loadNpmTasks('../../node_modules/grunt-contrib-sass');
-  grunt.loadNpmTasks('../../node_modules/grunt-touch');
-  grunt.loadNpmTasks('../../node_modules/grunt-contrib-copy');
-  grunt.loadNpmTasks('../../node_modules/grunt-contrib-uglify');
-  grunt.loadNpmTasks('../../node_modules/grunt-contrib-imagemin');
+  grunt.loadNpmTasks('../../../../../../node_modules/grunt-contrib-watch');
+  // grunt.loadNpmTasks('../../../../../../node_modules/grunt-bake');
+  grunt.loadNpmTasks('../../../../../../node_modules/grunt-contrib-sass');
+  grunt.loadNpmTasks('../../../../../../node_modules/grunt-touch');
+  grunt.loadNpmTasks('../../../../../../node_modules/grunt-contrib-copy');
+  grunt.loadNpmTasks('../../../../../../node_modules/grunt-contrib-uglify');
+  grunt.loadNpmTasks('../../../../../../node_modules/grunt-contrib-imagemin');
 };
