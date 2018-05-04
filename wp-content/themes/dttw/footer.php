@@ -17,14 +17,5 @@
 
 		<script src="/wp-content/themes/dttw/assets/dist/js/app.js"></script>
 
-		<script type="text/javascript">
-			$(".burger").click(function() {
-				$(this).toggleClass("open").toggleClass("close"),
-				$("nav.nav").toggleClass("open"),
-				// $("header").toggleClass("lock"),
-				console.log("nav-opened")
-			});
-		</script>
-
 	</body>
 </html>

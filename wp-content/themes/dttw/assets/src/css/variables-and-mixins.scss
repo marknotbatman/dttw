@@ -67,6 +67,9 @@ $six:'Six Caps', sans-serif;
 	@else if $point == large {
 		@media screen and (min-width: 64.063em) { @content ; }
 	}
+	@else if $point == small-portrait {
+		@media screen and (max-width: 39.9375em) and (orientation: portrait) { @content ; }
+	}
 }
 
 //PIXAR
