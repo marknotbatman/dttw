@@ -15,10 +15,16 @@
 
 		<?php wp_footer(); ?>
 
-		<script src="/assets/js/vendor/jquery.js"></script>
-		<script src="/assets/js/vendor/what-input.js"></script>
-		<script src="/assets/js/vendor/foundation.js"></script>
-		<script src="/assets/js/app.js"></script>
+		<script src="/wp-content/themes/dttw/assets/dist/js/app.js"></script>
+
+		<script type="text/javascript">
+			$(".burger").click(function() {
+				$(this).toggleClass("open").toggleClass("close"),
+				$("nav.nav").toggleClass("open"),
+				// $("header").toggleClass("lock"),
+				console.log("nav-opened")
+			});
+		</script>
 
 	</body>
 </html>

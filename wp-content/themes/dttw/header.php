@@ -42,6 +42,9 @@
 						</a>
 					</div>
 					<div class="columns medium-8 small-6">
+						<div id="toggle" class="hide-for-large">
+							<i class="burger bt-menu-trigger"><span>Menu</span></i>
+						</div>
 						<nav class="nav" role="navigation">
 							<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 						</nav>
