@@ -43,6 +43,18 @@ p {
 }
 
 
+section {
+	&:first-of-type {
+		padding-top:2rem;
+	}
+	&:last-of-type {
+		padding-bottom:2rem;
+	}
+}
+
+
+
+
 //Sponsors & Date
 section.sponsors-date {
 	.sponsors {
