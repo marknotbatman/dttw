@@ -3,7 +3,7 @@
 	<section class="hero">
 		<div class="row">
 
-			<div class="columns large-12 center">
+			<div class="columns large-12">
 				<h1><?php wp_title(''); ?></h1>
 			</div>
 

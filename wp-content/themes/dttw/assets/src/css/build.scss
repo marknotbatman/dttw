@@ -6,11 +6,10 @@ h1, h2, h3, p {
 	margin:0;
 	line-height:1;
 }
-
 h1, .h1 {
 	font-family:$krona;
 	text-transform:uppercase;
-	font-size:17px;
+	font-size:2rem;
 	letter-spacing:14px;
 	line-height:2;
 	font-weight:bold;
@@ -20,23 +19,38 @@ h1, .h1 {
 		letter-spacing: 2px;
 	}
 }
-h2, .h2 {
-	font-family:$six;
-	text-transform:uppercase;
-	font-size:10rem;
-	letter-spacing:14px;
-	@include breakpoint(small) {
-		font-size:6rem;
-	}
-}
-h3, .h3 {
-	font-family:$six;
-	text-transform:uppercase;
-	font-size:2.50rem;
-	letter-spacing:5px;
-}
+
+// h1, .h1 {
+// 	font-family:$krona;
+// 	text-transform:uppercase;
+// 	font-size:17px;
+// 	letter-spacing:14px;
+// 	line-height:2;
+// 	font-weight:bold;
+// 	@include breakpoint(small) {
+// 		font-size: 0.875rem;
+// 		line-height: 1.5;
+// 		letter-spacing: 2px;
+// 	}
+// }
+// h2, .h2 {
+// 	font-family:$six;
+// 	text-transform:uppercase;
+// 	font-size:10rem;
+// 	letter-spacing:14px;
+// 	@include breakpoint(small) {
+// 		font-size:6rem;
+// 	}
+// }
+// h3, .h3 {
+// 	font-family:$six;
+// 	text-transform:uppercase;
+// 	font-size:2.50rem;
+// 	letter-spacing:5px;
+// }
 p {
 	font-family:$sans;
+	line-height:2;
 }
 .nobr {
 	white-space: nowrap;
@@ -44,11 +58,17 @@ p {
 
 
 section {
+	padding-top:1rem;
+	padding-bottom:1rem;
 	&:first-of-type {
 		padding-top:2rem;
 	}
 	&:last-of-type {
 		padding-bottom:2rem;
+	}
+	&.hero {
+		padding-top:5rem;
+		padding-bottom:5rem;
 	}
 }
 

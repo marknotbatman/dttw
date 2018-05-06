@@ -10,65 +10,54 @@
 		</div>
 	</section>
 
-	<section class="faq">
-		<?php
+	<section class="page-content">
+		<div class="row">
+			<div class="columns large-10 large-offset-1 medium-12">
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		// check if the repeater field has rows of data
-		if( have_rows('faqs') ):
+					<?php the_content(); ?>
 
-		// loop through the rows of data
-		while ( have_rows('faqs') ) : the_row();
+					<?php endwhile; ?>
 
-        // display a sub field value
-		?>
+					<?php else: ?>
 
-		<strong><?php the_sub_field('question');?></strong>
-		
-		<p><?php the_sub_field('answer');?></p>
-		
-		<?php
+				<?php endif; ?>			
+			</div>
+		</div>
+	</section>
 
-		endwhile;
-
-		else :
-
-   		// no rows found
-
-		endif;
-
-		?>
+	<section class="copy">
+		<div class="row">
+			<div class="columns large-10 large-offset-1 medium-12 acf-faq">
+				<!-- <h1>FAQs</h1> -->
+				<?php
+					// check if the repeater field has rows of data
+					if( have_rows('faqs') ):
+					// loop through the rows of data
+					while ( have_rows('faqs') ) : the_row();
+			        // display a sub field value
+				?>
+					<div class="q-a">
+						<div class="question">
+							<p><?php the_sub_field('question');?></p>
+						</div>
+						<div class="answer">
+							<p><?php the_sub_field('answer');?></p>
+						</div>
+					</div>
+				<?php
+					endwhile;
+					else :
+			   		// no rows found
+					endif;
+				?>
+			</div>
+		</div>
 	</section>
 
 
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<?php 
-
-			$value = get_field( "page-title" );
-
-			if( $value ) {
-
-				echo $value;
-
-			} else {
-
-				echo 'empty';
-
-			}
-
-		?>
-
-		<h1><?php $value = get_field( "page-title" ); ?></h1>
-		<?php the_content(); ?>
-
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-		<h2><?php _e( 'Error', 'html5blank' ); ?></h2>
-
-	<?php endif; ?>
 
 
 <?php get_footer(); ?>
