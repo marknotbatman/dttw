@@ -20,6 +20,7 @@ h1, .h1 {
 	}
 }
 
+// From landing page
 // h1, .h1 {
 // 	font-family:$krona;
 // 	text-transform:uppercase;
@@ -48,7 +49,7 @@ h1, .h1 {
 // 	font-size:2.50rem;
 // 	letter-spacing:5px;
 // }
-p {
+p, li {
 	font-family:$sans;
 	line-height:2;
 }
@@ -61,14 +62,22 @@ section {
 	padding-top:1rem;
 	padding-bottom:1rem;
 	&:first-of-type {
-		padding-top:2rem;
+		padding-top:4rem;
 	}
 	&:last-of-type {
-		padding-bottom:2rem;
+		padding-bottom:4rem;
 	}
 	&.hero {
-		padding-top:5rem;
-		padding-bottom:5rem;
+		padding-top:6rem;
+		padding-bottom:6rem;
+	}
+	&.page-content {
+		p {
+			margin-bottom:1rem;
+			&:last-of-type {
+				margin-bottom:0;
+			}
+		}
 	}
 }
 
@@ -112,77 +121,88 @@ section.bots {
 		bottom:-8px;
 	}
 }
+
 footer {
-	background-color:$gray;
-	padding-top:4rem;
-	padding-bottom:4rem;
-	@include breakpoint(small) {
-		padding-top:2rem;
-		padding-bottom:2rem;
-	}
-	.important-dates {
-		display:flex;
-		align-content: center;
-		justify-content: center;
-		@include breakpoint(small) {
-			flex-direction:column;
-		}
-		.important {
-			display: flex;
-			flex-flow: column;
-			align-items: center;
-			justify-content: center;
-			width:20%;
-			border-right: 1px solid white;
-			@include breakpoint(small) {
-				width:100%;
-				border-right:0;
-				margin-bottom:1rem;
-				align-items:flex-start
-				// border-bottom: 1px solid white;
-			}
-			&:last-of-type {
-				border-right:none;
-				@include breakpoint(small) {
-					border-bottom:0;
-				}
-			}
-			.data {
-				@include breakpoint(small) {
-					display: block;
-					margin: 0 auto;
-					min-width: 175px;
-				}
-			}
-			h3 {
-				margin-bottom:0.5rem;
-				line-height:1.1;
-				position:relative;
-				@include breakpoint(medium) {
-					font-size:1.5rem;
-				}
-				span.highlight {
-					font-family:$sans;
-					font-size:10px;
-					position:absolute;
-					background-color:$yellow;
-				}
-			}
-			p {
-				font-family:$krona;
-				font-size:0.875rem;
-				letter-spacing:1px;
-				text-transform:uppercase;
-				@include breakpoint(medium) {
-					font-size:0.6rem;
-				}
-			}
-			span.yellow {
-				font-size:0.75rem;
-				font-family:$sans;
-				font-weight:bold;
-				text-transform:uppercase;
-			}
-		}
+	padding-top:2rem;
+	padding-bottom:2rem;
+	p {
+		font-family: $sans;
+		font-size:0.75rem;
+		color:#fff;
+		text-align: center;
 	}
 }
+// footer {
+// 	background-color:$gray;
+// 	padding-top:4rem;
+// 	padding-bottom:4rem;
+// 	@include breakpoint(small) {
+// 		padding-top:2rem;
+// 		padding-bottom:2rem;
+// 	}
+// 	.important-dates {
+// 		display:flex;
+// 		align-content: center;
+// 		justify-content: center;
+// 		@include breakpoint(small) {
+// 			flex-direction:column;
+// 		}
+// 		.important {
+// 			display: flex;
+// 			flex-flow: column;
+// 			align-items: center;
+// 			justify-content: center;
+// 			width:20%;
+// 			border-right: 1px solid white;
+// 			@include breakpoint(small) {
+// 				width:100%;
+// 				border-right:0;
+// 				margin-bottom:1rem;
+// 				align-items:flex-start
+// 				// border-bottom: 1px solid white;
+// 			}
+// 			&:last-of-type {
+// 				border-right:none;
+// 				@include breakpoint(small) {
+// 					border-bottom:0;
+// 				}
+// 			}
+// 			.data {
+// 				@include breakpoint(small) {
+// 					display: block;
+// 					margin: 0 auto;
+// 					min-width: 175px;
+// 				}
+// 			}
+// 			h3 {
+// 				margin-bottom:0.5rem;
+// 				line-height:1.1;
+// 				position:relative;
+// 				@include breakpoint(medium) {
+// 					font-size:1.5rem;
+// 				}
+// 				span.highlight {
+// 					font-family:$sans;
+// 					font-size:10px;
+// 					position:absolute;
+// 					background-color:$yellow;
+// 				}
+// 			}
+// 			p {
+// 				font-family:$krona;
+// 				font-size:0.875rem;
+// 				letter-spacing:1px;
+// 				text-transform:uppercase;
+// 				@include breakpoint(medium) {
+// 					font-size:0.6rem;
+// 				}
+// 			}
+// 			span.yellow {
+// 				font-size:0.75rem;
+// 				font-family:$sans;
+// 				font-weight:bold;
+// 				text-transform:uppercase;
+// 			}
+// 		}
+// 	}
+// }
