@@ -20,35 +20,6 @@ h1, .h1 {
 	}
 }
 
-// From landing page
-// h1, .h1 {
-// 	font-family:$krona;
-// 	text-transform:uppercase;
-// 	font-size:17px;
-// 	letter-spacing:14px;
-// 	line-height:2;
-// 	font-weight:bold;
-// 	@include breakpoint(small) {
-// 		font-size: 0.875rem;
-// 		line-height: 1.5;
-// 		letter-spacing: 2px;
-// 	}
-// }
-// h2, .h2 {
-// 	font-family:$six;
-// 	text-transform:uppercase;
-// 	font-size:10rem;
-// 	letter-spacing:14px;
-// 	@include breakpoint(small) {
-// 		font-size:6rem;
-// 	}
-// }
-// h3, .h3 {
-// 	font-family:$six;
-// 	text-transform:uppercase;
-// 	font-size:2.50rem;
-// 	letter-spacing:5px;
-// }
 p, li {
 	font-family:$sans;
 	line-height:2;
