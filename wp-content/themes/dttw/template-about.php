@@ -10,8 +10,29 @@
 		</div>
 	</section>
 
+	<section class="page-content">
+		<div class="row">
+			<div class="columns large-10 large-offset-1 medium-12">
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+					<?php the_content(); ?>
+
+					<?php endwhile; ?>
+
+					<?php else: ?>
+
+				<?php endif; ?>			
+			</div>
+		</div>
+	</section>
+
 	<section class="rules">
-		<?php the_field('rules'); ?>
+		<div class="row">
+			<div class="columns large-10 large-offset-1 medium-12">
+				<?php the_field('rules'); ?>
+			</div>
+		</div>
+		
 	</section>
 	<section class="deadlines">
 		deadlines
@@ -23,36 +44,5 @@
 	<section class="prizes">
 		prizes
 	</section>
-
-
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-		<?php 
-
-			$value = get_field( "page-title" );
-
-			if( $value ) {
-
-				echo $value;
-
-			} else {
-
-				echo 'empty';
-
-			}
-
-		?>
-
-		<h1><?php $value = get_field( "page-title" ); ?></h1>
-		<?php the_content(); ?>
-
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-		<h2><?php _e( 'Error', 'html5blank' ); ?></h2>
-
-	<?php endif; ?>
-
 
 <?php get_footer(); ?>
