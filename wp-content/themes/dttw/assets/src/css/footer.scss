@@ -1,0 +1,33 @@
+footer {
+	padding-top:2rem;
+	padding-bottom:2rem;
+	p {
+		font-family: $sans;
+		font-size:0.75rem;
+		color:rgba(255,255,255,0.5);
+	}
+	.sponsorship {
+		margin-bottom:1rem;
+		.logos {
+			margin-top:0.25rem;
+			display:flex;
+			align-items: center;
+			justify-content: flex-start;
+			height:auto;
+			a.logo {
+				width:15%;
+				margin-top:0;
+				margin-right:2rem;
+				margin-bottom:0;
+				height:auto;
+				&:last-of-type {
+					margin-right:0;
+				}
+				svg {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+	}
+}
