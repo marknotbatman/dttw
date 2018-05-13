@@ -13,7 +13,7 @@
 		</div>
 	</section>
 
-	<section class="sponsorship">
+	<section class="home-sponsorship">
 		<div class="row">
 			<div class="columns large-8 large-offset-2">
 			
