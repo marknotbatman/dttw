@@ -113,7 +113,8 @@
 			width:100%;
 			border-right:0;
 			margin-bottom:1rem;
-			align-items:flex-start
+			align-items:flex-start;
+			justify-content: flex-start;
 		}
 		&:last-of-type {
 			border-right:none;
@@ -124,7 +125,7 @@
 		.data, .location {
 			@include breakpoint(small) {
 				display: block;
-				margin: 0 auto;
+				// margin: 0 auto;
 				min-width: 175px;
 			}
 		}
