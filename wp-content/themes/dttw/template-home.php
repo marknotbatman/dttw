@@ -5,16 +5,13 @@
 	<section class="hero">
 		<div class="row">
 
-			<div class="columns large-12 center">
+			<div class="columns large-12 center title">
 				<h1><?php the_field('title-line-1'); ?></h1>
 				<h2><?php the_field('title-line-2'); ?></h2>
 			</div>
 
 		</div>
-	</section>
-
-	<section class="home-sponsorship">
-		<div class="row">
+		<div class="row home-sponsorship">
 			<div class="columns large-8 large-offset-2">
 			
 			<p>Presented By:</p>
@@ -33,44 +30,49 @@
 		</div>
 	</section>
 
-	<section class="dates">
-		dates
+	<section class="dates-locations">
+		<div class="row">
+			<div class="columns large-12">
+				<div class="important-dates">
+
+
+
+					<?php
+							// check if the repeater field has rows of data
+						if( have_rows('important_data') ):
+							// loop through the rows of data
+						while ( have_rows('important_data') ) : the_row();
+					        // display a sub field value
+					?>
+							
+						<div class="important">
+							<div class="data">
+								<h3 class="black"><?php the_sub_field('meeting_name');?></h3>
+								<p class="black"><?php the_sub_field('date_time');?></p>
+							</div>
+							<div class="location">
+								<p class="black"><?php the_sub_field('venue_name');?></p>
+								<p class="black"><?php the_sub_field('venue_address');?></p>
+							</div>
+						</div>
+		
+						
+					<?php
+						endwhile;
+						else :
+							// no rows found
+						endif;
+					?>
+
+
+
+
+
+					
+				</div>
+			</div>
+		</div>
 	</section>
-
-	<section class="location">
-		location
-	</section>
-
-
-<!-- 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-		<?php 
-
-			$value = get_field( "page-title" );
-
-			if( $value ) {
-
-				echo $value;
-
-			} else {
-
-				echo 'empty';
-
-			}
-
-		?>
-
-		<h1><?php $value = get_field( "page-title" ); ?></h1>
-		<?php the_content(); ?>
-
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-		<h2><?php _e( 'Error', 'html5blank' ); ?></h2>
-
-	<?php endif; ?> -->
-
 
 	<section class="bots">
 		<div class="row">
