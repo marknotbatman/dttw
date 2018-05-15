@@ -116,6 +116,21 @@ section.bots {
 }
 
 
+.button  {
+	display: inline-block;
+	height:auto;
+	font-family: $krona;
+	background:none;
+	border: 1px solid $gray;
+	text-transform: uppercase;
+	padding:.5rem 1.5rem;
+	font-size:0.875rem;
+	cursor: pointer;
+	transition: .2s ease all;
+	&:hover {
+		background:$yellow;
+	}
+}
 // footer {
 // 	background-color:$gray;
 // 	padding-top:4rem;
