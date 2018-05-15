@@ -5,19 +5,38 @@
 }
 .judges {
 	h2 {
-		margin-bottom:4rem;
+		margin-bottom:2rem;
+		@include breakpoint(large) {
+			margin-bottom:4rem;	
+		}
+	}
+	.row {
+		@include breakpoint(small) {
+			flex-direction: column;
+		}
+
 	}
 }
 .judge {
 	margin-bottom:4rem;
+	@include breakpoint(small) {
+		margin-bottom:2rem;
+	}
 	.judge-portrait {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
+		@include breakpoint(small) {
+			justify-content: flex-start;
+		}
 		a {
 			margin:0 auto;
 			display:block;
 			text-align: center;
+			@include breakpoint(small) {
+				width:75%;
+				margin:0 0 1rem 0;
+			}
 		}
 	}
 	.judge-bio {
@@ -27,9 +46,17 @@
 			font-size: 4rem;
 			letter-spacing: 10px;
 			margin-bottom:2rem;
+			@include breakpoint(small) {
+				font-size:3rem;
+				letter-spacing: 5px;
+				margin-bottom:1rem;
+			}
 		}
 		p {
 			margin-bottom:2rem;
+			@include breakpoint(small) {
+				margin-bottom:1rem;
+			}
 		}
 	}
 }

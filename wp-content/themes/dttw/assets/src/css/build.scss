@@ -23,6 +23,10 @@ h1, .h1 {
 p, li {
 	font-family:$sans;
 	line-height:2;
+	font-size:1rem;
+	@include breakpoint(small) {
+		font-size:0.875rem;
+	}
 }
 .nobr {
 	white-space: nowrap;
@@ -39,8 +43,12 @@ section {
 		padding-bottom:4rem;
 	}
 	&.hero {
-		padding-top:6rem;
-		padding-bottom:6rem;
+		padding-top:3rem;
+		padding-bottom:1rem;
+		@include breakpoint(large) {
+			padding-top:6rem;
+			padding-bottom:6rem;
+		}
 	}
 	&.page-content {
 		p {
@@ -108,6 +116,21 @@ section.bots {
 }
 
 
+.button  {
+	display: inline-block;
+	height:auto;
+	font-family: $krona;
+	background:none;
+	border: 1px solid $gray;
+	text-transform: uppercase;
+	padding:.5rem 1.5rem;
+	font-size:0.875rem;
+	cursor: pointer;
+	transition: .2s ease all;
+	&:hover {
+		background:$yellow;
+	}
+}
 // footer {
 // 	background-color:$gray;
 // 	padding-top:4rem;
