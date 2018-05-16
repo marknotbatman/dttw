@@ -7,7 +7,7 @@
 		line-height:2;
 		font-weight:bold;
 		@include breakpoint(small) {
-			font-size: 0.875rem;
+			font-size: 0.5rem;
 			line-height: 1.5;
 			letter-spacing: 2px;
 		}
@@ -19,6 +19,7 @@
 		letter-spacing:14px;
 		@include breakpoint(small) {
 			font-size:6rem;
+			letter-spacing: 10px;
 		}
 	}
 	h3, .h3 {
@@ -29,6 +30,9 @@
 	}
 	.title {
 		margin-bottom:1rem;
+		@include breakpoint(small) {
+			margin-bottom:2rem;
+		}
 	}
 	section {
 		background:$yellow;
@@ -38,6 +42,9 @@
 		}
 	}
 	.home-sponsorship {
+		@include breakpoint(small) {
+			padding-bottom:2rem;
+		}
 		p {
 			font-family:$krona;
 			text-transform: uppercase;
