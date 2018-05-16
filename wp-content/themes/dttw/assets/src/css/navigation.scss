@@ -154,6 +154,7 @@ nav.nav {
     animation-duration: .2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    z-index: 10;
 	@include breakpoint(large) {
 		opacity: 1;
 		display: block;
