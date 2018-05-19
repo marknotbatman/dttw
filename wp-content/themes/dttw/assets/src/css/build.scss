@@ -116,7 +116,7 @@ section.bots {
 }
 
 
-.button  {
+.button {
 	display: inline-block;
 	height:auto;
 	font-family: $krona;
@@ -127,10 +127,47 @@ section.bots {
 	font-size:0.875rem;
 	cursor: pointer;
 	transition: .2s ease all;
+	text-decoration: none;
+	color:black;
 	&:hover {
 		background:$yellow;
 	}
+	&.button-2 {
+		background:white;
+		&:hover {
+			background:black;
+			color:#fff;
+		}
+	}
 }
+
+
+//404 Styles
+.error404 {
+	section {
+		background-color:$yellow;
+		&.bots {
+			padding-bottom:0;
+		}
+	}
+	.fourohfour-containter {
+		padding-top:0rem;
+	}
+	.h2 {
+		font-family:$six;
+		text-transform:uppercase;
+		font-size:10rem;
+		letter-spacing:14px;
+		color:#fff;
+		@include breakpoint(small) {
+			font-size:6rem;
+			letter-spacing: 10px;
+		}
+	}
+}
+
+
+
 // footer {
 // 	background-color:$gray;
 // 	padding-top:4rem;
