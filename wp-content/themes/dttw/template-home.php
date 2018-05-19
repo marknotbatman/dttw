@@ -47,7 +47,7 @@
 							
 						<div class="important">
 							<div class="data">
-								<h3 class="black"><?php the_sub_field('meeting_name');?></h3>
+								<h3 class="white"><?php the_sub_field('meeting_name');?></h3>
 								<p class="black"><?php the_sub_field('date_time');?></p>
 							</div>
 							<div class="location">

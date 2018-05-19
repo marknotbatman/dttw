@@ -6,6 +6,7 @@
 		letter-spacing:14px;
 		line-height:2;
 		font-weight:bold;
+		color:#fff;
 		@include breakpoint(small) {
 			font-size: 0.5rem;
 			line-height: 1.5;
@@ -17,6 +18,7 @@
 		text-transform:uppercase;
 		font-size:10rem;
 		letter-spacing:14px;
+		color:#fff;
 		@include breakpoint(small) {
 			font-size:6rem;
 			letter-spacing: 10px;
