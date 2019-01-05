@@ -4,9 +4,7 @@
 			<div class="row">
 				<div class="columns medium-8 medium-offset-2 center">
 					<h1 class="h2"><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-					<h2>
-						<a class="button button-2" href="/contact">Contact Us For Help</a>
-					</h2>
+
 				</div>
 			</div>
 
